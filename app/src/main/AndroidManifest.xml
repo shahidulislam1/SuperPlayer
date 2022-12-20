@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.videee.superplayer">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+            tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/vpicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/vpicon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SuperPlayer">
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|layoutDirection"/>
+        <activity
+            android:name=".VideoFilesActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AllowAccessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme.SuperPlayer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
